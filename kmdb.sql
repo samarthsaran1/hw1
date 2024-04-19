@@ -123,7 +123,6 @@ CREATE TABLE movies (
   movie_title TEXT,
   release_year INTEGER,
   mpaa_rating TEXT,
-  studio_name TEXT,
   studio_id INTEGER
 );
 
@@ -151,9 +150,13 @@ CREATE TABLE roles (
 -- Use hard-coded foreign key IDs when necessary
 INSERT into movies (movie_title,release_year, mpaa_rating, studio_name)
 VALUES 
-('Batman Begins', '2005','PG-13','Warner Bros.'),
-('The Dark Knight', '2008', 'PG-13', 'Warner Bros.'),
-('The Dark Knight Rises','2012','PG-13','Warner Bros.');
+('Batman Begins', '2005','PG-13',1),
+('The Dark Knight', '2008', 'PG-13',1),
+('The Dark Knight Rises','2012','PG-13',1);
+
+INSERT into studios (studio_name)
+VALUES 
+('Warner Bros.');  
 
 INSERT into actors (actor_firstname, actor_lastname)
 VALUES 
@@ -172,18 +175,18 @@ VALUES
 INSERT into roles (role_firstname, role_lastname, movie_id, actor_id)
 VALUES
 ('Bruce', 'Wayne',1,1),
-('Alfred','x',1,2),
+('Alfred','',1,2),
 ('Ras','Al Ghul',1,3),
 ('Rachel', 'Dawes',1,4),
 ('Commissioner', 'Gordon',1,5),
 ('Bruce', 'Wayne',2,1),
-('Joker','x',2,6),
+('Joker','',2,6),
 ('Harvey','Dent',2,7),
-('Alfred','x',1,2),
+('Alfred','',2,2),
 ('Rachel', 'Dawes',2,8),
 ('Bruce','Wayne',3,1),
-('Commissioner','Gordon'3,2),
-('Bane','x',3,9),
+('Commissioner','Gordon',3,2),
+('Bane','',3,9),
 ('John','Blake',3,10),
 ('Selina','Kyle',3,11);
 -- TODO!
