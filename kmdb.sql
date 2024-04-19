@@ -155,6 +155,19 @@ VALUES
 ('The Dark Knight', '2008', 'PG-13', 'Warner Bros.'),
 ('The Dark Knight Rises','2012','PG-13','Warner Bros.');
 
+INSERT into actors (actor_firstname, actor_lastname)
+VALUES 
+('Christian', 'Bale'),
+('Michael', 'Caine'),
+('Liam', 'Neeson'),
+('Katie','Holmes'),
+('Gary','Oldman'),
+('Heath','Ledger'),
+('Aaron','Eckhart'),
+('Maggie','Gyllenhaal'),
+('Tom','Hardy'),
+('Joseph','Gordon-Levitt'),
+('Anne','Hathaway');  
 
 -- TODO!
 
