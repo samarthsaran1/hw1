@@ -140,13 +140,22 @@ CREATE TABLE actors (
 
 CREATE TABLE roles (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  role_firstname TEXT,
-  role_lastname TEXT
+  role_firstname,
+  role_lastname,
+  movie_id INTEGER,
+  actor_id INTEGER
 );
 -- TODO!
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
+INSERT into movies (movie_title,release_year, mpaa_rating, studio_name)
+VALUES 
+('Batman Begins', '2005','PG-13','Warner Bros.'),
+('The Dark Knight', '2008', 'PG-13', 'Warner Bros.'),
+('The Dark Knight Rises','2012','PG-13','Warner Bros.');
+
+
 -- TODO!
 
 -- Prints a header for the movies output
