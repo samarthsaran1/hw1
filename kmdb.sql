@@ -140,8 +140,8 @@ CREATE TABLE actors (
 
 CREATE TABLE roles (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  role_firstname,
-  role_lastname,
+  role_firstname TEXT,
+  role_lastname TEXT,
   movie_id INTEGER,
   actor_id INTEGER
 );
@@ -170,19 +170,20 @@ VALUES
 ('Anne','Hathaway');  
 
 INSERT into roles (role_firstname, role_lastname, movie_id, actor_id)
+VALUES
 ('Bruce', 'Wayne',1,1),
-('Alfred','',1,2),
-("Ra's",'Al Ghul',1,3),
+('Alfred','x',1,2),
+('Ras','Al Ghul',1,3),
 ('Rachel', 'Dawes',1,4),
 ('Commissioner', 'Gordon',1,5),
 ('Bruce', 'Wayne',2,1),
-('Joker','',2,6),
+('Joker','x',2,6),
 ('Harvey','Dent',2,7),
-('Alfred','',1,2),
+('Alfred','x',1,2),
 ('Rachel', 'Dawes',2,8),
 ('Bruce','Wayne',3,1),
 ('Commissioner','Gordon'3,2),
-('Bane','',3,9),
+('Bane','x',3,9),
 ('John','Blake',3,10),
 ('Selina','Kyle',3,11);
 -- TODO!
