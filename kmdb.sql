@@ -207,7 +207,6 @@ SELECT movie_title, release_year, mpaa_rating,studio_name from movies INNER JOIN
 .print ""
 
 
-
 -- The SQL statement for the cast output
 SELECT movie_title, actor_firstname,actor_lastname, role_firstname,role_lastname from movies 
 INNER JOIN roles on movies.id=roles.movie_id INNER JOIN actors on actors.id=roles.actor_id;
