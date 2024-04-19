@@ -134,7 +134,7 @@ CREATE TABLE actors (
 
   CREATE TABLE studios (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name_of_studio TEXT
+  studio_name TEXT
 );
 
 CREATE TABLE roles (
@@ -148,7 +148,7 @@ CREATE TABLE roles (
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
-INSERT into movies (movie_title,release_year, mpaa_rating, studio_name)
+INSERT into movies (movie_title,release_year, mpaa_rating, studio_id)
 VALUES 
 ('Batman Begins', '2005','PG-13',1),
 ('The Dark Knight', '2008', 'PG-13',1),
@@ -197,6 +197,7 @@ VALUES
 .print ""
 
 -- The SQL statement for the movies output
+SELECT movie_title, release_year, mpaa_rating,studio_name from movies INNER JOIN studios on movies.studio_id=studios.id;
 -- TODO!
 
 -- Prints a header for the cast output
@@ -207,4 +208,6 @@ VALUES
 
 
 -- The SQL statement for the cast output
+SELECT movie_title, actor_firstname,actor_lastname, role_firstname,role_lastname from movies 
+INNER JOIN roles on movies.id=roles.movie_id INNER JOIN actors on actors.id=roles.actor_id;
 -- TODO!
