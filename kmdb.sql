@@ -169,6 +169,22 @@ VALUES
 ('Joseph','Gordon-Levitt'),
 ('Anne','Hathaway');  
 
+INSERT into roles (role_firstname, role_lastname, movie_id, actor_id)
+('Bruce', 'Wayne',1,1),
+('Alfred','',1,2),
+("Ra's",'Al Ghul',1,3),
+('Rachel', 'Dawes',1,4),
+('Commissioner', 'Gordon',1,5),
+('Bruce', 'Wayne',2,1),
+('Joker','',2,6),
+('Harvey','Dent',2,7),
+('Alfred','',1,2),
+('Rachel', 'Dawes',2,8),
+('Bruce','Wayne',3,1),
+('Commissioner','Gordon'3,2),
+('Bane','',3,9),
+('John','Blake',3,10),
+('Selina','Kyle',3,11);
 -- TODO!
 
 -- Prints a header for the movies output
